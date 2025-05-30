@@ -22,7 +22,7 @@ git clone <your-repo-url>
 cd <your-repo-folder>
 ```
 
-### 2. Create and Activate a Python Environment
+### 2. Create and Activate the Python Environment (it can be a new or a pre-existing one)
 
 You can use `conda` or `virtualenv`.
 
@@ -32,7 +32,7 @@ conda create -n pneumonia_env python=3.8
 conda activate pneumonia_env
 ```
 
-### 3. Install Dependencies
+### 3. Install Dependencies (installing the packages - most important)
 
 ```bash
 pip install -r requirements.txt
@@ -44,7 +44,7 @@ conda env create -f environment.yml
 conda activate pneumonia_env
 ```
 
-### 4. Check PyTorch MPS/CPU/GPU Support
+### 4. Check PyTorch MPS/CPU/GPU Support (essential)
 
 ```python
 import torch
@@ -56,58 +56,19 @@ print("MPS available:", torch.backends.mps.is_available())
 
 ## Dataset
 
-Place the dataset `pneumoniamnist.npz` in the root folder of the project. You can download it from [MedMNIST](https://medmnist.com/).
+Place the dataset `pneumoniamnist.npz` in the root folder of the project. Downloaded from the kaggle link as provided in the assignment
 
 ---
 
 ## Running the Notebook
 
-Launch Jupyter Notebook:
+Launch Jupyter Notebook (you can also use jupyter lab):
 ```bash
 jupyter notebook
 ```
 Open and run the notebook `pgimer_ass_rohit_final.ipynb` step-by-step.
 
 ---
-
-## Key Features
-
-- **Model Architecture:** Pre-trained ResNet-50 fine-tuned for binary classification
-- **Loss Function:** CrossEntropy with class weighting
-- **Optimizer:** Adam with weight decay for regularization
-- **Augmentation:** RandomResizedCrop, Rotation, Horizontal Flip, Affine transforms
-- **Class Imbalance:** Weighted sampling + class weights
-- **Evaluation Metrics:** Accuracy, F1-Score, Confusion Matrix, ROC-AUC
-- **Dimensionality Reduction:** t-SNE and UMAP for learned feature visualization
-- **Early Stopping:** Implemented to avoid overfitting
-
----
-
-## Reproduce the Training
-
-```python
-# in notebook:
-train(model_res, train_loader, val_loader, criterion, optimizer, epochs=10)
-```
-
----
-
-## Results
-
-- **Validation Accuracy:** ~96%
-- **Test Accuracy:** ~82%
-- **ROC-AUC:** Visualized for qualitative model assessment
-
----
-
-## Visualizations
-
-- Confusion Matrix
-- ROC Curve
-- t-SNE and UMAP plots for feature space analysis
-
----
-
 ## Notes
 
 - Trained and tested on Mac M1 (with MPS support).
