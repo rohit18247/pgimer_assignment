@@ -18,8 +18,8 @@ This project implements a binary image classification model using a pre-trained 
 
 ### 1. Clone the Repository
 ```bash
-git clone <your-repo-url>
-cd <your-repo-folder>
+git clone https://github.com/rohit18247/pgimer_assignment/
+cd <move in to the directory>
 ```
 
 ### 2. Create and Activate the Python Environment (it can be a new or a pre-existing one)
@@ -71,11 +71,5 @@ Open and run the notebook `pgimer_ass_rohit_final.ipynb` step-by-step.
 ---
 ## Notes
 
-- Trained and tested on Mac M1 (with MPS support).
+- It was trained and tested on the Mac M1 (with MPS support).
 - Adapted for CPU/GPU usage if MPS unavailable.
-
----
-
-## License
-
-This project is licensed under MIT License.
