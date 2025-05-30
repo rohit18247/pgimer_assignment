@@ -66,7 +66,7 @@ Launch Jupyter Notebook (you can also use jupyter lab):
 ```bash
 jupyter notebook
 ```
-Open and run the notebook `pgimer_ass_rohit_final.ipynb` step-by-step.
+Open and run the notebook as directed within it.
 
 ---
 ## Notes
